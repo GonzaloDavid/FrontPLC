@@ -1,0 +1,58 @@
+<ng-container *ngIf="!showzones">
+    <p-tabView>
+        <p-tabPanel header="Zona 1-6">
+            <div class="animated infinite zoomIn faster">
+                <img class="mainzone" src="../../../assets/main-zone/main_zone.png">
+            </div>
+
+            <!-- boton zona 1 -->
+            <button class="zone1" pButton type="button" label="Zona 1" matTooltip="Zona 1" (click)="openzone(1)">
+            </button>
+            <!-- boton zona 2 -->
+            <button class="zone2" pButton type="button" label="Zona 2" matTooltip="Zona 2" (click)="openzone(2)">
+            </button>
+            <!-- boton zona 3 -->
+            <button class="zone3" pButton type="button" label="Zona 3" matTooltip="Zona 3" (click)="openzone(3)">
+            </button>
+            <!-- boton zona 4 -->
+            <button class="zone4" pButton type="button" label="Zona4" matTooltip="Zona 4" (click)="openzone(4)">
+            </button>
+            <!-- boton zona 5 -->
+            <button class="zone5" pButton type="button" label="Zona 5" matTooltip="Zona 5" (click)="openzone(5)">
+            </button>
+            <!-- boton zona 6 -->
+            <button class="zone6" pButton type="button" label="Zona 6 " matTooltip="Zona 6" (click)="openzone(6)">
+            </button>
+        </p-tabPanel>
+        <p-tabPanel header="Zona 7-13">
+            <div class="animated infinite zoomIn faster">
+                <img class="mainzone" src="../../../assets/main-zone/main_zone2.png">
+            </div>
+
+            <!-- boton zona 7 -->
+            <button class="zone7" pButton type="button" label="Zona 7" matTooltip="Zona 7" (click)="openzone(7)">
+            </button>
+            <!-- boton zona 8 -->
+            <button class="zone8" pButton type="button" label="Zona 8" matTooltip="Zona 8" (click)="openzone(8)">
+            </button>
+            <!-- boton zona 9 -->
+            <button class="zone9" pButton type="button" label="Zona 9" matTooltip="Zona 9" (click)="openzone(9)">
+            </button>
+            <!-- boton zona 10 -->
+            <button class="zone10" pButton type="button" label="Zona 10" matTooltip="Zona 10" (click)="openzone(10)">
+            </button>
+            <!-- boton zona 11 -->
+            <button class="zone11" pButton type="button" label="Zona 11" matTooltip="Zona 11" (click)="openzone(11)">
+            </button>
+            <!-- boton zona 12 -->
+            <button class="zone12" pButton type="button" label="Zona 12" matTooltip="Zona 12" (click)="openzone(12)">
+            </button>
+            <!-- boton zona 13 -->
+            <button class="zone13" pButton type="button" label="Zona 13" matTooltip="Zona 13" (click)="openzone(13)">
+            </button>
+        </p-tabPanel>
+    </p-tabView>
+</ng-container>
+<ng-container *ngIf="showzones">
+    <app-zones [idzone]="zoneselected" (back)="goback($event)"></app-zones>
+</ng-container>

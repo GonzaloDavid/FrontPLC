@@ -1,0 +1,42 @@
+<mat-accordion>
+    <ul class="nav">
+        <ng-container *ngFor="let item of menu">
+            <ng-container *ngIf="item.children && item.children.length > 0">
+                <mat-expansion-panel class="custom-expansion" [hideToggle]="'true'" #panel>
+                    <mat-expansion-panel-header [matTooltip]="item.description" matTooltipPosition="right" class="expansion-header" [collapsedHeight]="'48px'" [expandedHeight]="'48px'">
+                        <mat-panel-title *ngIf="!showSlim">
+                            {{ item.name }}
+                        </mat-panel-title>
+                        <mat-panel-description class="expansion-description" [ngStyle]="{ 'justify-content': showSlim ? 'center' : '' }">
+                            <i style="padding: 0 10px" *ngIf="!panel.expanded && !showSlim" class="fas fa-chevron-down"></i>
+                            <i style="padding: 0 10px" *ngIf="panel.expanded && !showSlim" class="fas fa-chevron-up "></i>
+                            <i class="fas" [ngClass]="item.iconName"></i>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <!-- ? Children -->
+                    <app-itemsnav class="itemsnav-children" [menu]="item.children" [showSlim]="showSlim"></app-itemsnav>
+                </mat-expansion-panel>
+            </ng-container>
+
+            <ng-container *ngIf="!item.children || item.children.length <= 0">
+                <ng-container *ngIf="item.ischild">
+                    <li matRipple matRippleColor="#ffffff30" class="nav-list" [routerLink]="[item.link]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a [matTooltip]="item.description" matTooltipPosition="right" class="nav-list-item" [ngClass]="{ justify: showSlim }">
+                            <i class="fas" [ngClass]="item.iconName"></i>
+                            <span *ngIf="!showSlim">{{ item.name }}</span>
+                        </a>
+                    </li>
+                </ng-container>
+                <ng-container *ngIf="!item.ischild">
+                    <li matRipple matRippleColor="#ffffff30" class="nav-list1" [routerLink]="[item.link]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a [matTooltip]="item.description" matTooltipPosition="right" class="nav-list-item" [ngClass]="{ justify: showSlim }">
+                            <i class="fas" [ngClass]="item.iconName"></i>
+                            <span *ngIf="!showSlim">{{ item.name }}</span>
+                        </a>
+                    </li>
+                </ng-container>
+
+            </ng-container>
+        </ng-container>
+    </ul>
+</mat-accordion>

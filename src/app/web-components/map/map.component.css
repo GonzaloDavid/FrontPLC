@@ -1,0 +1,231 @@
+.mainzone {
+  text-align: center !important;
+}
+.zone1 {
+  position: absolute;
+  top: 114px;
+  left: 600px;
+  width: 300px;
+  height: 150px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone2 {
+  position: absolute;
+  top: 188px;
+  left: 1097px;
+  width: 142px;
+  height: 230px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+
+.zone3 {
+  position: absolute;
+  top: 410px;
+  left: 360px;
+  width: 365px;
+  height: 125px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+
+.zone4 {
+  position: absolute;
+  top: 535px;
+  left: 360px;
+  width: 365px;
+  height: 190px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+
+.zone5 {
+  position: absolute;
+  top: 340px;
+  left: 110px;
+  width: 248px;
+  height: 195px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+
+.zone6 {
+  position: absolute;
+  top: 535px;
+  left: 110px;
+  width: 248px;
+  height: 190px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone7 {
+  position: absolute;
+  top: 95px;
+  left: 50px;
+  width: 368px;
+  height: 210px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone8 {
+  position: absolute;
+  top: 90px;
+  left: 440px;
+  width: 338px;
+  height: 140px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone9 {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  width: 320px;
+  height: 286px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone10 {
+  position: absolute;
+  top: 230px;
+  left: 420px;
+  width: 310px;
+  height: 246px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone11 {
+  position: absolute;
+  top: 230px;
+  left: 730px;
+  width: 300px;
+  height: 225px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone12 {
+  position: absolute;
+  top: 478px;
+  left: 422px;
+  width: 295px;
+  height: 110px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone13 {
+  position: absolute;
+  top: 588px;
+  left: 484px;
+  width: 178px;
+  height: 100px;
+  background: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+.zone1:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone2:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone3:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone4:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone5:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone6:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone7:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone8:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone9:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone10:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone11:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone12:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zone13:hover {
+  color: #ccec75;
+  font-size: 22px !important;
+  border-color: blue !important;
+  background-color: #86bcff !important;
+  opacity: 0.5;
+}
+.zoomIn {
+  animation-iteration-count: 1;
+}

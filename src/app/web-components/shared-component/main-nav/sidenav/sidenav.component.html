@@ -1,0 +1,41 @@
+<mat-sidenav-container [hasBackdrop]="false" autosize>
+    <!-- <mat-sidenav #drawer role="navigation" [mode]="mode" [opened]="(isHandset | async) === false"
+        [ngStyle]="{ width: slimactive ? '80px' : '240px' }" (mouseover)="slimactive = false"
+        (mouseleave)="!checked && (slimactive = true)">
+        <mat-toolbar [class.mat-elevation-z8]="true">
+            <span>
+                <img src="../../../../../assets/images/pronaca.jpg" alt="Logo Fuzzy" />
+                <span *ngIf="!slimactive">PRONACA</span>
+            </span>
+
+            <mat-slide-toggle [hidden]="slimactive" (toggleChange)="checked = !checked" color="accent"
+                [checked]="checked"></mat-slide-toggle>
+        </mat-toolbar>
+
+
+        <div class="ui-g" style="padding: 0px !important;">
+            <div class="ui-g-1" style="padding: 0px !important;">
+
+            </div>
+            <div class="ui-g-4" style="padding: 0px !important;">
+                <img src="../../../../../assets/images/pronaca.jpg" width="80%" />
+            </div>
+
+        </div>
+        <app-itemsnav [menu]="menu" [showSlim]="slimactive"></app-itemsnav>
+    </mat-sidenav> -->
+    <mat-sidenav-content role="main">
+        <!-- ?Header -->
+        <app-header [visibleToggleIcon]="true"
+            (toggleClicked)="(slimactive = true) && drawer.toggle()">
+        </app-header>
+        <!-- ? Body -->
+        <div class="main-container body-content animated fadeIn faster">
+            <ng-content></ng-content>
+        </div>
+        <!-- ? Footer -->
+        <app-footer></app-footer>
+
+        <!-- ? Fin sidenav-content -->
+    </mat-sidenav-content>
+</mat-sidenav-container>

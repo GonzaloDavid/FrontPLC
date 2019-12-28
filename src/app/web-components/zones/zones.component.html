@@ -1,0 +1,138 @@
+<div class="ui-g" style="padding: 0px !important;">
+    <div class="ui-g-12" style="text-align: left !important;padding: 0px !important;">
+        <button class="ui-button-danger" pButton type="button" label="Regresar" icon="ui-icon-chevron-left"
+            (click)="goback()"></button>
+    </div>
+    <div class="ui-g-12" style="text-align: center !important; padding: 0px !important;">
+        <h3>Zona {{idzone}}</h3>
+    </div>
+</div>
+<div class="ui-g" style="padding: 0px !important;">
+    <div class="ui-g-12" style="text-align: center !important;">
+        <ng-container *ngIf="idzone==1">
+            <div class="animated infinite zoomIn faster">
+                <img src="../../../assets/zones/Zona_1.png">
+            </div>
+        </ng-container>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==2">
+                <img src="../../../assets/zones/Zona_2.png">
+
+                <!-- Camara 15 -->
+                <button class="camera15" pButton type="button" label="Cámara 15" matTooltip="Cámara 15"
+                    (click)="openChambers(2,15)">
+                </button>
+
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==3">
+                <img src="../../../assets/zones/Zona_3.png">
+
+                <!-- Camara 2 -->
+                <button class="camera2" pButton type="button" label="Cámara 2" matTooltip="Cámara 2"
+                    (click)="openChambers(idzone,2)">
+                </button>
+
+                <!-- Camara 3 -->
+                <button class="camera3" pButton type="button" label="Cámara 3" matTooltip="Cámara 3"
+                    (click)="openChambers(idzone,3)">
+                </button>
+
+                <!-- Camara 4 -->
+                <button class="camera4" pButton type="button" label="Cámara 4" matTooltip="Cámara 4"
+                    (click)="openChambers(idzone,4)">
+                </button>
+                <!-- Camara 5 -->
+                <button class="camera5" pButton type="button" label="Cámara 5" matTooltip="Cámara 5"
+                    (click)="openChambers(idzone,5)">
+                </button>
+                <!-- Camara 6 -->
+                <button class="camera6" pButton type="button" label="Cámara 6" matTooltip="Cámara 6"
+                    (click)="openChambers(idzone,6)">
+                </button>
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==4">
+                <img src="../../../assets/zones/Zona_4.png">
+
+                <!-- Camara 9 -->
+                <button class="camera9" pButton type="button" label="Cámara 9" matTooltip="Cámara 9"
+                    (click)="openChambers(idzone,9)">
+                </button>
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==5">
+                <img src="../../../assets/zones/Zona_5.png">
+
+                <!-- Camara 1 -->
+                <button class="camera1" pButton type="button" label="Cámara 1" matTooltip="Cámara 1"
+                    (click)="openChambers(idzone,1)">
+                </button>
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==6">
+                <img src="../../../assets/zones/Zona_6.png">
+
+                <!-- Camara 10 -->
+                <button class="camera10" pButton type="button" label="Cámara 10" matTooltip="Cámara 10"
+                    (click)="openChambers(idzone,10)">
+                </button>
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==7">
+                <img src="../../../assets/zones/Zona_7.png">
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==8">
+                <img src="../../../assets/zones/Zona_8.png">
+
+                <!-- Camara 8 -->
+                <!-- <button class="camera8" pButton type="button" label="Cámara 8" matTooltip="Cámara 8"
+                    (click)="openChambers(idzone,10)">
+                </button> -->
+
+                <!-- Camara 9 -->
+                <!-- <button class="camera10" pButton type="button" label="Cámara 10" matTooltip="Cámara 10"
+                    (click)="openChambers(idzone,10)">
+                </button> -->
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==9">
+                <img src="../../../assets/zones/Zona_9.png">
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==10">
+                <img src="../../../assets/zones/Zona_10.png">
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==11">
+                <img src="../../../assets/zones/Zona_11.png">
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==12">
+                <img src="../../../assets/zones/Zona_12.png">
+            </ng-container>
+        </div>
+        <div class="animated infinite zoomIn faster">
+            <ng-container *ngIf="idzone==13">
+                <img src="../../../assets/zones/Zona_13.png">
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+
+<ng-container *ngIf="showchambers">
+    <app-chambers [idzone]="idzone" [idchamber]="idchamber" [display]="showchambers"
+        (outchambers)="outputchambers($event)"></app-chambers>
+</ng-container>

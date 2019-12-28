@@ -1,0 +1,21 @@
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.footer-content {
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+img {
+  max-width: 64px;
+}
+
+.texto {
+  align-self: center;
+}

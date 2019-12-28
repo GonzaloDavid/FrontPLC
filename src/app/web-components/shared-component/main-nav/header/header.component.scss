@@ -1,0 +1,55 @@
+
+
+header {
+  width: 100%;
+  background-color: black;
+  color: white
+}
+
+.nav-tools {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-tools-home {
+  display: flex;
+
+  .active {
+    color:  rgba(255, 255, 255, 0.7);
+  }
+}
+
+a {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+i {
+  padding: 0 4px;
+}
+
+.nav-home {
+  display: none;
+  justify-content: space-around;
+  a {
+    flex: 1;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .nav-tools {
+    background-color: black;
+    color: white;
+  }
+  .nav-tools-home {
+    display: none;
+  }
+  .nav-home {
+    display: flex;
+  }
+}

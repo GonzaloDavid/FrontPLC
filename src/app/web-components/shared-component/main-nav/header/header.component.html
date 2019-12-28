@@ -1,0 +1,38 @@
+<header [class.mat-elevation-z8]="true">
+    <nav class="nav-tools">
+        <a class="toolbar" *ngIf="visibleToggleIcon" (click)="_toggleClicked()" mat-button>
+            <i class="fas fa-bars fa-lg fa-fw"></i>
+        </a>
+        <span style="display: flex;align-items: center;padding: 0 40px 0px 20px">
+      <img src="../../../../../assets/images/pronaca.png" style="height: 32px;" />
+      Pronaca
+    </span>
+
+        <nav class="nav-tools-home" *ngIf="buttonsHomeShow">
+            <ng-container *ngFor="let item of menuHome">
+                <a [matTooltip]="item.description" mat-button [routerLink]="[item.link]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <span>{{ item.name }}</span>
+                    <i class="fas" [ngClass]="item.iconName"></i>
+                </a>
+            </ng-container>
+        </nav>
+
+        <div class="flex-grow-1"></div>
+
+        <ng-container *ngFor="let item of menu">
+            <a *ngIf="item.active" [routerLink]="[item.link]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" mat-button (click)="logout(item)">
+                <span>{{ item.name }}</span>
+                <i class="fas" [ngClass]="item.iconName"></i>
+            </a>
+        </ng-container>
+    </nav>
+    <!-- ? Para mobile -->
+    <nav class="nav-home" *ngIf="buttonsHomeShow">
+        <ng-container *ngFor="let item of menuHome">
+            <a mat-button [routerLink]="[item.link]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                <span>{{ item.name }}</span>
+                <i class="fas" [ngClass]="item.iconName"></i>
+            </a>
+        </ng-container>
+    </nav>
+</header>
