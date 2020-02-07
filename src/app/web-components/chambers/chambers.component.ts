@@ -13,6 +13,7 @@ export class ChambersComponent implements OnInit {
 
   @Output() outchambers: EventEmitter<any> = new EventEmitter();
   temperatureList: Temperature[] = [];
+  selectedpersonTable:any;
 
   constructor() {
     this.temperatureList = [
