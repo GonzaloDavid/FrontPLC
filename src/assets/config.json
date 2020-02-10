@@ -1,0 +1,4 @@
+{
+  "apiBaseUrl aux": "http://ec2-3-227-79-1.compute-1.amazonaws.com:8080/",
+  "apiBaseUrl": "http://localhost:8080/"
+}

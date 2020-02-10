@@ -2,29 +2,60 @@
     [style]="{width: '60%', height:'80%','display':'flex','flex-direction':'column'}" (onHide)="hidemodalperson()">
     <p-header>Zona {{idzone}} / Camara {{idchamber}}</p-header>
     <div class="dialog-body">
-        <p-table #dt [value]="temperatureList" selectionMode="single"
-            [(selection)]="selectedpersonTable" [scrollable]="false" scrollHeight="100%"
-            [style]="{'font-size':'12px','height':'100%'}"  [paginator]="true"
-            [rows]="temperatureList.length" [responsive]="true" dataKey="name">
 
-            <ng-template pTemplate="header" let-columns>
-                <tr>
-                    <th style="width: 50%;">Variable</th>
-                    <th style="width: 50%;">Valor</th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-rowData let-index="rowIndex" let-columns="columns">
-                <tr [pSelectableRow]="rowData">
-                    <td>
-                        {{rowData.name}}
-                    </td>
-                    <td class="center">
-                            
-                        <input id="input" type="text" style="width: 100%" pInputText [(ngModel)]="rowData.value" />
-                    </td>
-                </tr>
-            </ng-template>
-        </p-table>
+        <p-tabView>
+            <p-tabPanel header="Valores">
+                <p-table #dt [value]="sensorList" selectionMode="single" [(selection)]="selectedpersonTable"
+                    [scrollable]="false" scrollHeight="100%" [style]="{'font-size':'12px','height':'100%'}"
+                    [paginator]="true" [rows]="sensorList.length" [responsive]="true" dataKey="id">
+
+                    <ng-template pTemplate="header" let-columns>
+                        <tr>
+                            <th style="width: 10%;">Estado</th>
+                            <th style="width: 50%;">Sensor</th>
+                            <th style="width: 40%;">Valor</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-rowData let-index="rowIndex" let-columns="columns">
+                        <tr [pSelectableRow]="rowData">
+                            <td class="center">
+                                <ng-container *ngIf="rowData.sensor">
+                                    <button type="button" value="1" id="idbutton1"
+                                        class="boton-estado btn-default"></button>
+                                </ng-container>
+                                <ng-container *ngIf="!rowData.sensor">
+                                    <button type="button" value="0" id="idbutton1"
+                                        class="boton-estado btn-default"></button>
+                                </ng-container>
+                            </td>
+                            <td class="center">
+                                {{rowData.sensor}}
+                            </td>
+                            <td class="center">
+                                {{rowData.value}}
+                                <!-- <input id="input" type="text" style="width: 100%" pInputText [(ngModel)]="rowData.value" /> -->
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="emptymessage" let-columns>
+                        <tr>
+                            <td [attr.colspan]="3">
+                                No records found
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </p-tabPanel>
+            <p-tabPanel header="Gráfica">
+                <ng-container *ngIf="sensorList.length>0">
+                        <p-chart type="line" [data]="data" (onDataSelect)="selectData($event)"></p-chart>
+                </ng-container>
+                <ng-container *ngIf="sensorList.length==0">
+                       <span>No hay valores a gráficar</span>
+                </ng-container>
+            </p-tabPanel>
+        </p-tabView>
+
     </div>
     <p-footer>
         <button class="ui-button-success" icon="ui-icon-save" type="button" pButton (click)="save()"

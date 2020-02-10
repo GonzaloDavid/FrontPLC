@@ -7,14 +7,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ZonesComponent implements OnInit {
 
-  @Input() idzone: number;
+  @Input() idzone: string;
   @Output() back: EventEmitter<any> = new EventEmitter();
 
   showchambers: boolean;
 
   //zona y camara seleccionadas
-  idzoneselected: number;
-  idchamber: number;
+  idzoneselected: string;
+  idchamber: string;
 
   constructor() { }
 
@@ -24,7 +24,7 @@ export class ZonesComponent implements OnInit {
   goback() {
     this.back.emit(false);
   }
-  openChambers(idzone: number, idcamera: number) {
+  openChambers(idzone: string, idcamera: string) {
     this.showchambers = true;
 
     this.idzone=idzone;

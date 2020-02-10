@@ -1,3 +1,39 @@
 .center{
     text-align: center !important;
 }
+button[value='1'] {
+    width: 15px;
+    border-color: #43A047;
+    background-color: #43A047;
+    ;
+    border-width: 2px;
+    border-style: solid;
+    height: 15px;
+    margin: 5px;
+    padding: 9px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 11px;
+    line-height: 32px;
+    text-transform: uppercase;
+    float: left;
+}
+
+button[value='0'] {
+    width: 15px;
+    border-color: #34495E;
+    background-color: #34495E;
+    border-width: 2px;
+    border-style: solid;
+    height: 15px;
+    margin: 5px;
+    padding: 9px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 11px;
+    line-height: 32px;
+    text-transform: uppercase;
+    float: left;
+}

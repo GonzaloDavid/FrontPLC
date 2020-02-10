@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +26,19 @@ import {TableModule} from 'primeng/table';
 import {InputTextModule} from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import {ToastModule} from 'primeng/toast';
+import { SensorService } from './services/sensor.service';
+import { ConfigService } from './services/config/config.service';
+import { ServicesModule } from './services/services.module';
+import { HttpClientModule } from '@angular/common/http';
+import {ChartModule} from 'primeng/chart';
+
+export function initApp(configService: ConfigService) {
+  return () => configService.initApp();
+}
+
+export function getSettings(configService: ConfigService) {
+  return () => configService.configApiBaseUrl();
+}
 
 @NgModule({
   declarations: [
@@ -40,6 +53,7 @@ import {ToastModule} from 'primeng/toast';
     FooterComponent,
     ItemsnavComponent,
     ChambersComponent,
+    
     
     
   ],
@@ -58,10 +72,20 @@ import {ToastModule} from 'primeng/toast';
     TableModule,
     InputTextModule,
     FormsModule,
-    ToastModule
+    ToastModule,
+    ServicesModule,
+    HttpClientModule,
+    ChartModule
     
   ],
-  providers: [],
+  providers: [
+    
+    ConfigService,
+    
+    // TODO:========== *** Revizar initApp utilidad porqué setTime de 3 s? ***
+    // { provide: APP_INITIALIZER, useFactory: initApp, deps: [ConfigService], multi: true },
+    { provide: APP_INITIALIZER, useFactory: getSettings, deps: [ConfigService], multi: true },
+  ],
   bootstrap: [
     AppComponent
   ]

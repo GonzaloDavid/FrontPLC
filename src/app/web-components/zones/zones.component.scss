@@ -3,7 +3,7 @@
 }
 .camera2 {
   position: absolute;
-  top: 162px;
+  top: 108px;
   left: 105px;
   width: 228px;
   height: 440px;
@@ -13,7 +13,7 @@
 }
 .camera3 {
   position: absolute;
-  top: 162px;
+  top: 108px;
   left: 337px;
   width: 218px;
   height: 440px;
@@ -23,7 +23,7 @@
 }
 .camera4 {
   position: absolute;
-  top: 162px;
+  top: 108px;
   left: 563px;
   width: 228px;
   height: 440px;
@@ -33,7 +33,7 @@
 }
 .camera5 {
   position: absolute;
-  top: 162px;
+  top: 108px;
   left: 793px;
   width: 218px;
   height: 440px;
@@ -43,7 +43,7 @@
 }
 .camera6 {
   position: absolute;
-  top: 162px;
+  top: 108px;
   left: 1014px;
   width: 218px;
   height: 440px;
@@ -105,7 +105,7 @@
 }
 .camera9 {
   position: absolute;
-  top: 332px;
+  top: 280px;
   left: 689px;
   width: 573px;
   height: 240px;
@@ -122,7 +122,7 @@
 }
 .camera1 {
   position: absolute;
-  top: 152px;
+  top: 105px;
   left: 375px;
   width: 578px;
   height: 489px;
@@ -139,7 +139,7 @@
 }
 .camera10 {
   position: absolute;
-  top: 159px;
+  top: 110px;
   left: 675px;
   width: 182px;
   height: 183px;
@@ -168,12 +168,19 @@
 }
 .camera8 {
   position: absolute;
-  top: 159px;
-  left: 675px;
-  width: 182px;
-  height: 183px;
+  top: 112px;
+  left: 723px;
+  width: 482px;
+  height: 324px;
   text-align: center !important;
   background: transparent;
   color: transparent;
   border-color: transparent;
+}
+.camera8:hover {
+  color: black !important;
+  font-size: 42px !important;
+  border-color: yellow !important;
+  background-color: #ffffb5 !important;
+  opacity: 0.5;
 }

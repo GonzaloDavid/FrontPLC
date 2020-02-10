@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class MapComponent implements OnInit {
 
   showzones:boolean;
-  zoneselected:number;
+  zoneselected:string;
 
   constructor() { }
 
   ngOnInit() {
   }
-  openzone(idzone:number)
+  openzone(idzone:string)
   {
     console.log('zone',idzone)
     this.zoneselected=idzone;
