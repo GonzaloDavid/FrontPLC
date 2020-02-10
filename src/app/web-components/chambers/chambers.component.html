@@ -48,7 +48,7 @@
             </p-tabPanel>
             <p-tabPanel header="Gráfica">
                 <ng-container *ngIf="sensorList.length>0">
-                        <p-chart type="line" [data]="data" (onDataSelect)="selectData($event)"></p-chart>
+                        <p-chart type="line" [data]="data" ></p-chart>
                 </ng-container>
                 <ng-container *ngIf="sensorList.length==0">
                        <span>No hay valores a gráficar</span>
