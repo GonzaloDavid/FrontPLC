@@ -3,7 +3,7 @@
 }
 .zone1 {
   position: absolute;
-  top: 114px;
+  top: 64px;
   left: 600px;
   width: 300px;
   height: 150px;
@@ -13,7 +13,7 @@
 }
 .zone2 {
   position: absolute;
-  top: 188px;
+  top: 138px;
   left: 1097px;
   width: 142px;
   height: 230px;
@@ -24,7 +24,7 @@
 
 .zone3 {
   position: absolute;
-  top: 410px;
+  top: 360px;
   left: 360px;
   width: 365px;
   height: 125px;
@@ -35,7 +35,7 @@
 
 .zone4 {
   position: absolute;
-  top: 535px;
+  top: 485px;
   left: 360px;
   width: 365px;
   height: 190px;
@@ -46,7 +46,7 @@
 
 .zone5 {
   position: absolute;
-  top: 340px;
+  top: 290px;
   left: 110px;
   width: 248px;
   height: 195px;
@@ -57,7 +57,7 @@
 
 .zone6 {
   position: absolute;
-  top: 535px;
+  top: 485px;
   left: 110px;
   width: 248px;
   height: 190px;
@@ -67,7 +67,7 @@
 }
 .zone7 {
   position: absolute;
-  top: 95px;
+  top: 45px;
   left: 50px;
   width: 368px;
   height: 210px;
@@ -77,7 +77,7 @@
 }
 .zone8 {
   position: absolute;
-  top: 90px;
+  top: 40px;
   left: 440px;
   width: 338px;
   height: 140px;
@@ -87,7 +87,7 @@
 }
 .zone9 {
   position: absolute;
-  top: 300px;
+  top: 250px;
   left: 100px;
   width: 320px;
   height: 286px;
@@ -97,7 +97,7 @@
 }
 .zone10 {
   position: absolute;
-  top: 230px;
+  top: 180px;
   left: 420px;
   width: 310px;
   height: 246px;
@@ -107,7 +107,7 @@
 }
 .zone11 {
   position: absolute;
-  top: 230px;
+  top: 180px;
   left: 730px;
   width: 300px;
   height: 225px;
@@ -117,7 +117,7 @@
 }
 .zone12 {
   position: absolute;
-  top: 478px;
+  top: 428px;
   left: 422px;
   width: 295px;
   height: 110px;
@@ -127,7 +127,7 @@
 }
 .zone13 {
   position: absolute;
-  top: 588px;
+  top: 538px;
   left: 484px;
   width: 178px;
   height: 100px;
